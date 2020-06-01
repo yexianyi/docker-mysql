@@ -10,7 +10,7 @@ RUN apt-get update -y \
   && apt-get install git -y \
   && git clone ${TEST_DB_REPO} \
   && cd test_db \
-  && mysql -uroot -p${MYSQL_ROOT_PASSWORD} < employees.sql
+  && mysql -uroot -p${MYSQL_ROOT_PASSWORD} < employees.sql \
   && wget ${MODEL_URL} \
   && apt-get purge git -y \
   && apt-get autoremove git -y \
